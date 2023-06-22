@@ -1,0 +1,164 @@
+#container {
+    height: 700px;
+}
+
+#elem {
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    margin-top: 90px;
+}
+
+.toolList {
+    background: #cad8b9;
+    padding: 0 1px;
+    list-style: none;
+    float: left;
+    border-radius: 5px;
+    border: solid 3px #4CAF50;
+    box-shadow: 1px 2px 3px #ccc;
+    width: 47px;
+    text-align: center;
+    margin-right: 8px;
+    margin: 96px 4px 12px 0px;
+    position: absolute;
+    z-index: 20;
+}
+
+.toolList li {
+    border: 2px solid #4CAF50;
+    padding: 7px 0;
+    border-width: 0 0 2px 0;
+}
+
+.toolList li:last-child {
+    border: 0;
+    padding: 10px 0 5px;
+}
+
+.toolList h2 {
+    font-size: 12px;
+    margin: 0px 0 3px -2px;
+    font-weight: 700;
+    height: auto;
+}
+
+.colors button,
+.size button {
+    border: 1px solid #fff;
+    width: 17px;
+    height: 17px;
+    border-radius: 100%;
+    box-shadow: 2px 2px 3px #b5b5b5;
+    text-indent: 1000px;
+    overflow: hidden;
+    margin: 1px auto !important;
+}
+
+.small,
+.normal,
+.large,
+.huge {
+    background: #000;
+    display: block;
+    margin: auto !important;
+}
+
+.small {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.normal {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.large {
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.huge {
+    width: 28px !important;
+    height: 28px !important;
+}
+
+.purple {
+    background: #85357c;
+}
+
+.pink {
+    background: #FF1493;
+}
+
+.green {
+    background: #00a54f;
+}
+
+.lime {
+    background: #cce269;
+}
+
+.yellow {
+    background: #ffcf33;
+}
+
+.brown {
+    background: #986928;
+}
+
+.orange {
+    background: #FF7F00;
+}
+
+.red {
+    background: #ff0000;
+}
+
+.blue {
+    background: #04aef0;
+}
+
+.black {
+    background: #000000;
+}
+
+.grey {
+    background: #939599;
+}
+
+.midBlue {
+    background: #181583;
+}
+
+.lightBlue {
+    background: #0073bc;
+}
+
+#canvasDiv {
+    float: left;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.tools button {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    background: transparent;
+    box-shadow: 2px 2px 3px #b5b5b5;
+    border-radius: 100px;
+    margin-left: -2px;
+    border: solid 2px #fff;
+    margin-bottom: 4px;
+}
+
+.tools button img {
+    width: 100%;
+    margin: 0;
+}

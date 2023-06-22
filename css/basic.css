@@ -1,0 +1,631 @@
+        /* Basic sample */
+        
+        body {
+            overflow: hidden;
+            background-color: transparent;
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .flipbook-viewport {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .flipbook-viewport .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: auto;
+        }
+        
+        .flipbook-viewport .flipbook {
+            width: 922px;
+            height: 600px;
+            left: -590px;
+            top: -410px;
+        }
+        
+        .flipbook-viewport .page {
+            width: 461px;
+            height: 600px;
+            background-color: white;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        .flipbook .page {
+            -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            -ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .flipbook-viewport .page img {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            margin: 0;
+        }
+        
+        .flipbook-viewport .shadow {
+            -webkit-transition: -webkit-box-shadow 0.5s;
+            -moz-transition: -moz-box-shadow 0.5s;
+            -o-transition: -webkit-box-shadow 0.5s;
+            -ms-transition: -ms-box-shadow 0.5s;
+            -webkit-box-shadow: 0 0 20px #ccc;
+            -moz-box-shadow: 0 0 20px #ccc;
+            -o-box-shadow: 0 0 20px #ccc;
+            -ms-box-shadow: 0 0 20px #ccc;
+            box-shadow: 0 0 20px #ccc;
+        }
+        
+        .pagePadding {
+            padding: 0;
+            height: 730px;
+            position: relative;
+            background: #fff;
+            width: 560px;
+        }
+        
+        .pagePadding img {
+            width: 97%;
+            margin-left: 27px;
+        }
+        
+        .padLeft45 {
+            padding-left: 45px;
+        }
+        
+        .pagePadding h2 {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: normal;
+            height: 57px;
+            margin: 0 40px 20px 0;
+        }
+        
+        .pagePadding span,
+        .pagePadding i {
+            float: left;
+            margin-top: 7px;
+        }
+        
+        .pagePadding i {
+            width: 40px;
+            height: 40px;
+            margin: 0px 15px 0 5px;
+        }
+        
+        mark {
+            background-color: transparent!important;
+            float: left;
+            margin: 0px 30px 0 0px;
+            border-radius: 8px;
+            padding: 7px !important;
+        }
+        
+        .mrgB15 {
+            margin-bottom: 15px !important;
+        }
+        
+        .circle {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            text-align: center;
+            line-height: 90px;
+            box-shadow: 0px 0px 10px #b7b7b7;
+            border-radius: 100px;
+            color: #ed1c24;
+            font-size: 60px;
+            font-weight: 300;
+        }
+        
+        embed,
+        iframe {
+            width: 560px;
+            height: 690px;
+            position: absolute;
+            top: 10px;
+            margin: auto;
+            left: 4%;
+            border: none;
+        }
+        
+        .embedRight {
+            margin-left: 20px;
+        }
+        
+        .modal-content {
+            border-radius: 10px;
+            border: 0;
+        }
+        
+        .modal-dialog {
+            max-width: 300px;
+            text-align: center;
+            margin: 10% auto 0;
+        }
+        
+        .modal-header {
+            display: block;
+            text-align: center;
+            border: 0;
+            padding: 36px 0 20px;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .modal-header h5 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .modal-body {
+            padding: 0 0 35px;
+            background: #f5f5f5;
+            font-size: 20px;
+            font-weight: 100;
+            border-radius: 15px;
+        }
+        
+        .modal-footer {
+            text-align: center;
+            display: block;
+            padding: 0;
+            border-top: 1px solid #a9a9a9;
+            z-index: 1;
+        }
+        
+        .modal-footer button {
+            border-radius: 0 0 10px 10px;
+            padding: 9px 0;
+        }
+        
+        #correctPopupColor .modal-header,
+        #correctPopupColor .modal-body,
+        #wrongPopupColor .modal-header,
+        #wrongPopupColor .modal-body,
+        #correctPopup .modal-header,
+        #correctPopup .modal-body,
+        #wrongPopup .modal-header,
+        #wrongPopup .modal-body {
+            background: transparent;
+            color: #fff;
+            z-index: 1;
+        }
+        
+        #wrongPopup .modal-content,
+        #wrongPopupColor .modal-content {
+            background: #f00001;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #correctPopup .modal-content,
+        #correctPopupColor .modal-content {
+            background: #058800;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #correctPopup .modal-content img,
+        #correctPopupColor .modal-content img {
+            position: absolute;
+            left: -32px;
+            width: 62%;
+            top: 5px;
+            opacity: 0.8;
+        }
+        
+        #wrongPopup .modal-content img,
+        #wrongPopupColor .modal-content img {
+            position: absolute;
+            right: -45px;
+            width: 58%;
+            top: -27px;
+            opacity: 0.8;
+        }
+        
+        .modal-backdrop.show {
+            opacity: 0.7;
+        }
+        
+        .modal-backdrop {
+            background-color: #fff;
+            width: 100%;
+            margin-left: 0;
+        }
+        
+        .modalDialogTop {
+            margin: 63% auto 0;
+        }
+        
+        #container {
+            display: none;
+            background-color: #fff;
+            color: #000;
+            position: absolute;
+            width: 280px;
+            border-radius: 5px;
+            left: 0;
+            margin: 10px auto;
+            padding: 15px;
+            box-sizing: border-box;
+            text-align: center;
+            z-index: 1111111;
+            right: 0;
+            box-shadow: 0px 5px 20px #949494;
+        }
+        /* Designing dialog box's okay buttun */
+        
+        #container button {
+            display: inline-block;
+            text-align: center;
+            width: 100px;
+        }
+        /* Dialog box message decorating */
+        
+        #container .message {
+            text-align: center;
+            padding: 0 0px 20px 0px;
+            font-size: 18px;
+        }
+        
+        .overlayBg {
+            background: rgb(255 255 255 / 14%);
+            width: 600px;
+            height: 685px;
+            position: absolute;
+            left: -180px;
+            top: 0;
+            z-index: -111;
+        }
+        
+        .circleNone {
+            display: block
+        }
+        
+        .bg,
+        .bg1,
+        .bg2,
+        .bg3,
+        .bg4 {
+            position: absolute;
+            width: 85%;
+            height: 80%;
+            pointer-events: all;
+            cursor: default;
+            z-index: 11111;
+            top: 57px;
+            left: 50px;
+        }
+        
+        .bg1 {
+            width: 86%;
+            height: 90%;
+            top: 15px;
+            left: 56px;
+        }
+        
+        .bg2 {
+            width: 86%;
+            height: 57%;
+            top: 15px;
+            left: 56px;
+        }
+        
+        .bg3 {
+            width: 86%;
+            height: 53%;
+            top: 15px;
+            left: 56px;
+        }
+        
+        .bg4 {
+            width: 86%;
+            height: 40%;
+            top: 15px;
+            left: 56px;
+        }
+        
+        .bg-clicked {
+            pointer-events: none!important;
+            cursor: pointer
+        }
+        
+        .contentBg img,
+        .contentBg2 img {
+            width: 99%;
+        }
+        
+        .contentBg,
+        .contentBg2 {
+            position: relative;
+            width: 555px;
+            margin: 5px 13px 0;
+            height: 690px;
+            overflow: hidden;
+        }
+        
+        .contentBg2 {
+            margin: 3px 32px;
+        }
+        
+        .contentoverlay {
+            position: absolute;
+            width: 100%;
+            height: 44%;
+            background: rgb(255 255 255 / 55%);
+            z-index: 111;
+            left: 0;
+            top: 120px;
+        }
+        
+        .contentBg2 .contentoverlay {
+            height: 77%;
+        }
+        
+        .contentBg .row,
+        .contentBg2 .row {
+            margin: 0 !important;
+            padding: 0 !important;
+            position: absolute;
+            z-index: 1111;
+            width: 100%;
+        }
+        
+        .contentBg .row {
+            top: 138px;
+        }
+        
+        .contentBg2 .row {
+            top: 100px;
+        }
+        
+        .content a {
+            display: block;
+            padding: 2px 18px;
+            font-size: 24px;
+        }
+        
+        .content a {
+            display: block;
+            padding: 11px 0 18px;
+            /*border-bottom: 1px dotted;*/
+            font-size: 13px;
+            font-weight: 600;
+			color:#000;
+        }
+        .content p {
+			margin-bottom:0px;
+			font-size:11px;
+			}
+        /*.content a:nth-child(even) {
+            color: #2E3092;
+        }
+        
+        .content a:nth-child(odd) {
+            color: #ff0000;
+        }*/
+        
+        .content a:hover {
+            text-decoration: none;
+        }
+        
+        .content a span {
+            float: right;
+        }
+        
+        .content .row {
+            padding: 20px;
+            margin: 0;
+            height: 550px;
+            overflow: auto;
+        }
+        
+        .content h2 {
+            font-weight: 800;
+            color: #2c6175;
+            text-align: center;
+        }
+        
+        .tool,
+        .tool2,
+        .traceTool {
+            background: #cad8b9;
+            padding: 7px 4px;
+            list-style: none;
+            float: left;
+            border-radius: 5px;
+            border: solid 3px #4caf50;
+            box-shadow: 1px 2px 3px #ccc;
+            width: 50px;
+            text-align: center;
+            margin: 12px 4px;
+            position: absolute;
+            top: 76px;
+            left: -4px;
+            height: 95px
+        }
+        
+        .traceTool {
+            height: 130px;
+        }
+        
+        .tool h2,
+        .tool2 h2,
+        .traceTool h2 {
+            font-size: 12px;
+            margin: 0 0 10px -4px;
+            height: auto;
+            font-weight: 700;
+            border-bottom: 2px solid #4baf4f;
+            width: 44px;
+            padding-bottom: 6px
+        }
+        
+        .tool button,
+        .traceTool button {
+            width: 35px;
+            height: 35px;
+            padding: 0;
+            background: 0 0;
+            box-shadow: 2px 2px 3px #b5b5b5;
+            border-radius: 100px;
+            margin-left: -2px;
+            border: solid 2px #fff;
+            margin-bottom: 4px;
+            background: #ffd34d;
+        }
+        
+        .tool img,
+        .tool2 img,
+        .traceTool img {
+            margin: 0 !important;
+        }
+        
+        .tool2 button {
+            width: 35px;
+            height: 35px;
+            padding: 0px 4px 3px;
+            background: 0 0;
+            box-shadow: 2px 2px 3px #b5b5b5;
+            border-radius: 100px;
+            margin-left: -2px;
+            border: solid 2px #fff;
+            margin-bottom: 4px;
+            background: #ffd34d;
+        }
+        
+        .page6 .div2 {
+            position: absolute;
+            cursor: crosshair;
+            left: 67px;
+            top: 49px;
+            width: 416px;
+            height: 566px;
+        }
+        
+        #matchInfo .modal-dialog,
+        #yellowPopup .modal-dialog,
+        #limePopup .modal-dialog,
+        #greenPopup .modal-dialog,
+        #orangePopup .modal-dialog,
+        #bluePopup .modal-dialog,
+        #redPopup .modal-dialog {
+            max-width: 390px;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 16px #ccc;
+            top: 20px;
+            margin: 0 auto;
+        }
+        
+        #matchInfo .modal-content,
+        #yellowPopup .modal-content,
+        #limePopup .modal-content,
+        #greenPopup .modal-content,
+        #orangePopup .modal-content,
+        #bluePopup .modal-content,
+        #redPopup .modal-content {
+            background-color: transparent;
+        }
+        
+        #matchInfo .modal-body,
+        #yellowPopup .modal-body,
+        #limePopup .modal-body,
+        #orangePopup .modal-body,
+        #bluePopup .modal-body,
+        #greenPopup .modal-body,
+        #redPopup .modal-body {
+            padding: 30px;
+            background: transparent;
+            font-size: 22px;
+            font-weight: 800;
+            color: #4b4b4b;
+            margin-top: 23px;
+        }
+        
+        #matchInfo button,
+        #yellowPopup button,
+        #limePopup button,
+        #greenPopup button,
+        #orangePopup button,
+        #bluePopup button,
+        #redPopup button {
+            width: 40px;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            background: #ccc;
+            border-radius: 0 10px;
+            height: 40px;
+            z-index: 111;
+        }
+        
+        #matchInfo span,
+        #yellowPopup span,
+        #limePopup span,
+        #greenPopup span,
+        #orangePopup span,
+        #bluePopup span,
+        #redPopup span {
+            float: none;
+            padding: 3px 13px;
+        }
+        
+        .match {
+            position: absolute;
+            top: 229px;
+            left: 180px;
+            height: 410px;
+            width: 190px;
+        }
+        
+        .greenTxt {
+            color: green;
+            padding: 0 !important;
+        }
+        
+        .orangeTxt {
+            color: #FF7F00;
+            padding: 0 !important;
+        }
+        
+        .yellowTxt {
+            color: #ffe600;
+            padding: 0 !important;
+        }
+        
+        .limeTxt {
+            color: #cce269;
+            padding: 0 !important;
+        }
+        
+        .blueTxt {
+            color: #0084ff;
+            padding: 0 !important;
+        }
+        
+        .redTxt {
+            color: #ff0000;
+            padding: 0 !important;
+        }
+        
+        .brownTxt {
+            color: #834e00;
+            padding: 0 !important;
+        }
+        
+        .pinkTxt {
+            color: #ff009d;
+            padding: 0 !important;
+        }
